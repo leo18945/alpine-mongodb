@@ -1,4 +1,4 @@
-![docker](https://github.frapsoft.com/top/docker-security.jpg)
+![Mongodb](https://webassets.mongodb.com/_com_assets/cms/mongodb-logo-rgb-j6w271g1xn.jpg)
 
 # alpine-mongodb
 
