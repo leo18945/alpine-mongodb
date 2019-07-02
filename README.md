@@ -4,15 +4,12 @@
 
 _MongoDB based on Alpine Linux Edge running as unprivileged User_
 
-[![Docker Automated Build](https://img.shields.io/docker/automated/ellerbrock/alpine-mongodb.svg)](https://hub.docker.com/r/ellerbrock/alpine-mongodb/) [![Docker Pulls](https://img.shields.io/docker/pulls/ellerbrock/alpine-mongodb.svg)](https://hub.docker.com/r/ellerbrock/alpine-mongodb/)  [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg)](https://github.com/ellerbrock/open-source-badges/) [![Gitter Chat](https://badges.gitter.im/frapsoft/frapsoft.svg)](https://gitter.im/frapsoft/frapsoft/)
+[![Docker Automated Build](https://img.shields.io/docker/automated/leo18945/alpine-mongodb.svg)](https://hub.docker.com/r/leo18945/alpine-mongodb/) [![Docker Pulls](https://img.shields.io/docker/pulls/leo18945/alpine-mongodb.svg)](https://hub.docker.com/r/leo18945/alpine-mongodb/) [![Image Size](https://img.shields.io/microbadger/image-size/leo18945/alpine-mongodb/latest.svg)](https://hub.docker.com/r/leo18945/alpine-mongodb/tags/)
 
-[![Build with alpine 3.8](https://img.shields.io/badge/build%20with%20alpine-3.8-blue.svg)](https://hub.docker.com/r/ellerbrock/alpine-mongodb/) [![Build with dumb-init 1.2.1](https://img.shields.io/badge/build%20with%20dumb--init-1.2.1-blue.svg)](https://github.com/ellerbrock/open-source-badges/) [![Build with mongodb 3.6.7](https://img.shields.io/badge/build%20with%20mongodb-3.6.7-blue.svg)](https://hub.docker.com/r/ellerbrock/alpine-mongodb/) 
-[![Image Size](https://img.shields.io/microbadger/image-size/ellerbrock/alpine-mongodb/latest.svg)](https://links.beevelop.com/d-shields)
+[![Build with alpine 3.8](https://img.shields.io/badge/build%20with%20alpine-3.8-blue.svg)](https://github.com/alpinelinux/docker-alpine/) [![Build with dumb-init 1.2.1](https://img.shields.io/badge/build%20with%20dumb--init-1.2.1-blue.svg)](https://github.com/Yelp/dumb-init/tree/v1.2.1/) [![Build with mongodb 3.6.7](https://img.shields.io/badge/build%20with%20mongodb-3.6.7-blue.svg)](https://github.com/mongodb/mongo/tree/v3.6/)
 
-<!-- [![Quay Status](https://quay.io/repository/ellerbrock/alpine-mongodb/status)](https://quay.io/repository/ellerbrock/alpine-mongodb) -->
-
-- Docker: [ellerbrock/alpine-mongodb](https://hub.docker.com/r/ellerbrock/alpine-mongodb/)
-- Quay: [ellerbrock/alpine-mongodb](https://quay.io/repository/ellerbrock/alpine-mongodb)
+- Github: &nbsp;[leo18945/alpine-mongodb](https://github.com/leo18945/alpine-mongodb)
+- Docker: [leo18945/alpine-mongodb](https://hub.docker.com/r/leo18945/alpine-mongodb)
 
 ## About the Container
 
@@ -44,17 +41,13 @@ ENV SERVICE_LOGLEVEL ${SERVICE_LOGLEVEL:-vvv}
 
 Documentation: <https://docs.docker.com/compose/compose-file/#/args>
 
-## Installation
-
-`docker pull leo18945/alpine-mongodb`
-
 ## Run Mongodb
 
 Run mongodb in background, and then attach to container.
 
 ```shell
-# docker run --name my_mongodb -d leo18945/alpine-mongodb
-# docker exec -it my_mongodb mongo
+$ docker run --name my_mongodb -d leo18945/alpine-mongodb
+$ docker exec -it my_mongodb mongo
 > 
 > db.version()
 3.6.7
@@ -63,10 +56,10 @@ switched to db test
 >
 ```
 
-Run mongodb and immediately into mongo client console.
+Run mongodb and immediately into mongo shell.
 
 ```shell
-# docker run -it leo18945/alpine-mongodb mongo
+$ docker run -it leo18945/alpine-mongodb mongo
 > 
 > db.version()
 3.6.7
@@ -78,9 +71,9 @@ switched to db test
 Run mongodb as executable.
 
 ```shell
-# echo 'docker run -it leo18945/alpine-mongodb mongo' > /usr/local/bin/mongo
-# chmod +x /usr/local/bin/mongo
-# mongo
+$ echo 'docker run -it leo18945/alpine-mongodb mongo' > /usr/local/bin/mongo
+$ chmod +x /usr/local/bin/mongo
+$ mongo
 > 
 > db.version()
 3.6.7
@@ -93,4 +86,4 @@ switched to db test
 
 _Get the latest News about Web Development, Open Source, Tooling, Server & Security_
 
-[![Github](https://github.frapsoft.com/social/github.png)](https://github.com/ellerbrock/)[![Docker](https://github.frapsoft.com/social/docker.png)](https://hub.docker.com/u/ellerbrock/)[![npm](https://github.frapsoft.com/social/npm.png)](https://www.npmjs.com/~ellerbrock)[![Twitter](https://github.frapsoft.com/social/twitter.png)](https://twitter.com/frapsoft/)[![Facebook](https://github.frapsoft.com/social/facebook.png)](https://www.facebook.com/frapsoft/)[![Google+](https://github.frapsoft.com/social/google-plus.png)](https://plus.google.com/116540931335841862774)[![Gitter](https://github.frapsoft.com/social/gitter.png)](https://gitter.im/frapsoft/frapsoft/)
+[![Github](https://github.frapsoft.com/social/github.png)](https://github.com/leo18945/)[![Docker](https://github.frapsoft.com/social/docker.png)](https://hub.docker.com/u/leo18945/)[![Twitter](https://github.frapsoft.com/social/twitter.png)](https://twitter.com/leo18945/)[![Facebook](https://github.frapsoft.com/social/facebook.png)](https://www.facebook.com/leo18945/)
