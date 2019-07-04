@@ -11,8 +11,8 @@ mongod \
 
 sleep 5
 
-if [ "$@" == "mongo" ]; then
-    mongo
+if [ $# -gt 0 ]; then
+    exec "$@"
 else
     tail -f ${SERVICE_LOGFILE}
 fi
