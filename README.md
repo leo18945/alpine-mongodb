@@ -56,6 +56,34 @@ switched to db test
 >
 ```
 
+Run mongodb and then into shell, do what ever you want.
+
+```shell
+$ docker run -it leo18945/alpine-mongodb ash
+~ $ ps -ef
+PID   USER     TIME  COMMAND
+    1 mongo     0:00 {entrypoint.sh} /usr/bin/dumb-init /bin/sh /entrypoint.sh ash
+    7 mongo     0:00 ash
+    8 mongo     0:00 mongod --port 27017 --dbpath /data/db --logpath /data/log/mongod.log --logappend -v
+   35 mongo     0:00 ps -ef
+~ $
+~ $ mongo
+> db.version()
+3.6.7
+> use test
+switched to db test
+> exit
+bye
+~ $
+~ $ ps -ef
+PID   USER     TIME  COMMAND
+    1 mongo     0:00 {entrypoint.sh} /usr/bin/dumb-init /bin/sh /entrypoint.sh ash
+    7 mongo     0:00 ash
+    8 mongo     0:01 mongod --port 27017 --dbpath /data/db --logpath /data/log/mongod.log --logappend -v
+   40 mongo     0:00 ps -ef
+~ $
+```
+
 Run mongodb and immediately into mongo shell.
 
 ```shell
